@@ -1,26 +1,24 @@
 import React, {useState} from 'react';
 import ClassCounter from './components/ClassCounter';
 import Counter from './components/Counter';
+import PostItem from './components/PostItem';
 import './styles/app.css';
 
 function App() {
-  const [value, setValue] = useState('Текст в инпуте')
+  const [posts, setPosts] = useState([
+    {id: 1, title: 'Javascript', body: 'Description'},
+    {id: 2, title: 'Python', body: 'Description'},
+    {id: 3, title: 'C++', body: 'Description'},
+  ]);
 
   return (
     <div className="App">
       {/* <Counter /> */}
       {/* <ClassCounter /> */}
-      <div className="post">
-        <div className="post__content">
-          <strong>1. JavaScript</strong>
-          <div>
-            JavaScript - язык программирования
-          </div>
-        </div>
-        <div className="post__btns">
-          <button>удалить</button>
-        </div>
-      </div>
+      <h1 style={{textAlign: 'center'}}>Список постов</h1>
+      {posts.map(post =>
+        <PostItem post={post} key={post.id} />
+      )}
     </div>
   );
 }
