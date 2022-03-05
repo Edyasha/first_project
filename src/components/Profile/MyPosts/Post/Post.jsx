@@ -1,13 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import cl from "./Post.module.css";
 
-const Post = () => {
+const Post = (props) => {
+  const [likes, setCount] = useState(0);
+
   return (
     <div className={cl.item}>
       <img src="https://www.meme-arsenal.com/memes/4e4e3eca35797638c567d55e62dc392e.jpg"/>
-      Post 1
+        {props.message}
       <div>
-        <span>like</span>
+        <button onClick={() => setCount(likes + 1)}>like</button>
+        <a> {likes} </a>
       </div>
     </div>
   );
