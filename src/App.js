@@ -15,12 +15,16 @@ function App() {
   ]);
 
   const [title, setTitle] = useState('');
-  const bodyInputRef = useRef();
+  const [body, setBody] = useState();
 
   const addNewPost = (e) => {
     e.preventDefault()
-    console.log(title)
-    console.log(bodyInputRef.current.value)
+    const newPost = {
+      id: Date.now(),
+      title,
+      body
+    }
+    setPosts([...posts, newPost])
   }
 
   return (
@@ -33,8 +37,8 @@ function App() {
           placeholder="Название поста"
         />
         <MyInput 
-          ref={bodyInputRef}
-          type="text" 
+          value={body}
+          onChange={e => setBody(e.terget.value)} 
           placeholder="Описание поста"
         />
         <MyButton onClick={addNewPost}>Создать пост</MyButton>
