@@ -1,9 +1,20 @@
 .header {
   grid-area: h;
-  background-color: rgb(202, 255, 123);
+  background: url(https://s0.tchkcdn.com/g-INhcFgyGACfuwv572HsR9g/4/15988/1200x630/f/0/dc39b47fdfb945992659fd0d0a8cc166_7.jpg);
+  background-size: contain;
 }
   
-.header img {
-  width: 40px;
-}
-  
+/* .header img {
+  max-height: 100px;
+  width: 100%;
+  height: auto;
+} */
+
+/* .responsive {
+  max-height: 100px;
+  width: 100%;
+  height: auto;
+} */
+
+/* https://s0.tchkcdn.com/g-INhcFgyGACfuwv572HsR9g/4/15988/1200x630/f/0/dc39b47fdfb945992659fd0d0a8cc166_7.jpg */
+/* https://kartinkin.net/uploads/posts/2021-07/1625536942_13-kartinkin-com-p-flag-ukraini-fon-krasivie-foni-13.jpg */
