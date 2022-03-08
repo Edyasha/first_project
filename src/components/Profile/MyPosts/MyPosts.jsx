@@ -2,9 +2,9 @@ import React from "react";
 import cl from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
-const MyPosts = () => {
+const MyPosts = (props) => {
   return (
-    <div>
+    <div className={cl.postsBlock}>
       My posts
       <div>
         <textarea></textarea>
