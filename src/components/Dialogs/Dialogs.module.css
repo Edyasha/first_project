@@ -3,12 +3,17 @@
   grid-template-columns: 2fr 10fr;
 }
 
-.dialogs_item {
+.dialogs .dialogs_item {
   padding: 10px;
+  color: white;
 }
 
 .messages {
   padding: 10px;
+}
+
+.messages .message {
+  color: white;
 }
 
 .dialog a {
