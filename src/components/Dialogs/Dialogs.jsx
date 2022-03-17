@@ -17,16 +17,16 @@ const Dialogs = (props) => {
     <DialogItem id={dialog.id} name={dialog.name} key={dialog.id} />
   ));
 
-  let messagesData = [
-    { id: 1, message: "Hi!" },
-    { id: 2, message: "How is your it-kamasutra?" },
-    { id: 3, message: "Yo!" },
-    { id: 4, message: "A History Lesson." },
-    { id: 5, message: "The Wrong Lesson of Munich!" },
-    { id: 6, message: "Will we learn our lesson?" },
-  ];
+  // let messagesData = [
+  //   { id: 1, message: "Hi!" },
+  //   { id: 2, message: "How is your it-kamasutra?" },
+  //   { id: 3, message: "Yo!" },
+  //   { id: 4, message: "A History Lesson." },
+  //   { id: 5, message: "The Wrong Lesson of Munich!" },
+  //   { id: 6, message: "Will we learn our lesson?" },
+  // ];
 
-  let messagesElements = messagesData.map((message) => (
+  let messagesElements = props.message.map((message) => (
     <Message id={message.id} message={message.message} key={message.id} />
   ));
 
