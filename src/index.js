@@ -1,35 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-
-let dialogsData = [
-  { id: 1, name: "Edison" },
-  { id: 2, name: "Maksim" },
-  { id: 3, name: "Viktoria" },
-  { id: 4, name: "Boris" },
-  { id: 5, name: "Sergey" },
-  { id: 6, name: "Nataliya" },
-];
-
-let messagesData = [
-  { id: 1, message: "Hi!" },
-  { id: 2, message: "How is your it-kamasutra?" },
-  { id: 3, message: "Yo!" },
-  { id: 4, message: "A History Lesson." },
-  { id: 5, message: "The Wrong Lesson of Munich!" },
-  { id: 6, message: "Will we learn our lesson?" },
-];
-
-let posts = [
-  { id: 1, message: "Hi, how are you?", likesCount: 12 },
-  { id: 2, message: "It's my first post!", likesCount: 8 },
-  { id: 3, message: "Yo!" },
-  { id: 4, message: "A History Lesson." },
-  { id: 5, message: "The Wrong Lesson of Munich!" },
-  { id: 6, message: "Will we learn our lesson?" },
-];
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import state from './redux/state';
 
 ReactDOM.render(
-    <App data={dialogsData} message={messagesData} posts={posts} />,
-  document.getElementById('root')
+  <App data={state.dialogsData} message={state.messagesData} posts={state.posts} />,
+  document.getElementById("root")
 );
