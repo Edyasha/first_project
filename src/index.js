@@ -20,7 +20,16 @@ let messagesData = [
   { id: 6, message: "Will we learn our lesson?" },
 ];
 
+let posts = [
+  { id: 1, message: "Hi, how are you?", likesCount: 12 },
+  { id: 2, message: "It's my first post!", likesCount: 8 },
+  { id: 3, message: "Yo!" },
+  { id: 4, message: "A History Lesson." },
+  { id: 5, message: "The Wrong Lesson of Munich!" },
+  { id: 6, message: "Will we learn our lesson?" },
+];
+
 ReactDOM.render(
-    <App data={dialogsData} message={messagesData} />,
+    <App data={dialogsData} message={messagesData} posts={posts} />,
   document.getElementById('root')
 );
