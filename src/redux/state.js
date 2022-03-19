@@ -28,17 +28,24 @@ let state = {
       { id: 5, message: "The Wrong Lesson of Munich!" },
       { id: 6, message: "Will we learn our lesson?" },
     ],
+    newPostText: "It-kamasutra.COM",
   },
 };
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
   let newPost = {
     id: 7,
-    message: postMessage,
+    message: state.profilePage.newPostText,
     likesCount: 0,
   };
 
   state.profilePage.posts.push(newPost);
+  state.profilePage.newPostText = "";
+  rerenderEntireTree(state);
+}
+
+export let updateNewPostText = (newText) => {
+  state.profilePage.newPostText = newText;
   rerenderEntireTree(state);
 }
 
